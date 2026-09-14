@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CollabOS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="desktop">
+    <div class="desktop-icons">
+      <button class="desktop-icon" data-app="files">
+        <span>📁</span>
+        <p>Files</p>
+      </button>
+
+      <button class="desktop-icon" data-app="chat">
+        <span>💬</span>
+        <p>Live Chat</p>
+      </button>
+
+      <button class="desktop-icon" data-app="editor">
+        <span>📝</span>
+        <p>Editor</p>
+      </button>
+
+      <button class="desktop-icon" data-app="whiteboard">
+        <span>🎨</span>
+        <p>Whiteboard</p>
+      </button>
+
+      <button class="desktop-icon" data-app="admin">
+        <span>🛡️</span>
+        <p>Admin Console</p>
+      </button>
+    </div>
+
+    <div id="window-area"></div>
+
+    <div id="start-menu" class="hidden">
+      <div class="start-header">
+        <strong>CollabOS</strong>
+        <span>Owner Edition</span>
+      </div>
+
+      <input id="app-search" type="text" placeholder="Search apps..." />
+
+      <div class="start-apps">
+        <button data-app="files">📁 File Manager</button>
+        <button data-app="chat">💬 Live Chat</button>
+        <button data-app="editor">📝 Collaborative Editor</button>
+        <button data-app="whiteboard">🎨 Whiteboard</button>
+        <button data-app="admin">🛡️ Admin Console</button>
+        <button data-app="settings">⚙️ Settings</button>
+      </div>
+    </div>
+
+    <div id="context-menu" class="hidden">
+      <button id="refresh-desktop">Refresh</button>
+      <button id="change-wallpaper">Change Wallpaper</button>
+      <button id="open-admin-context">Open Admin Console</button>
+    </div>
+
+    <div class="taskbar">
+      <button id="start-button" class="start-button">▦</button>
+
+      <div id="taskbar-apps"></div>
+
+      <div class="system-tray">
+        <span id="connection-status">● Online</span>
+        <span id="clock"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
